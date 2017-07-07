@@ -15,9 +15,13 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
   }
+
+
   public navigateUser(number:Number){
     console.info("hello");
     if(number==1) {
+
+      // if using routerLink relativeTo is not necessary. However if using the router relativeTo : is mandatory to navigate
       this.router.navigate(['register'], {relativeTo: this.route});
     }else if ( number == 2){
       this.router.navigate(['findpw'], {relativeTo: this.route})
